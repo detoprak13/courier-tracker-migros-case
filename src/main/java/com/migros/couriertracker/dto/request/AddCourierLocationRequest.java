@@ -26,7 +26,6 @@ public class AddCourierLocationRequest {
 		return lat;
 	}
 
-
 	public Double getLng() {
 		return lng;
 	}
