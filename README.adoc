@@ -1,0 +1,13 @@
+= Foreign Exchange App
+:doctype: book
+
+=== Requirements
+Developed on `Java 8`. Using `Maven 3.6.3` for dependency management tool.
+
+=== Run Commands
+```bash
+mvn clean install
+java -jar target/courier-tracker-0.0.1-SNAPSHOT.jar
+```
+
+After running, you can find Api Documentation here: http://localhost:8080/docs/api-guide.html[*Migros Courier Tracker Documentation*]
