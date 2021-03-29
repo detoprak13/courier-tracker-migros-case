@@ -1,4 +1,4 @@
-= Foreign Exchange App
+= Migros Courier Tracker
 :doctype: book
 
 === Requirements
