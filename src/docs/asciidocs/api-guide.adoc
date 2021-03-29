@@ -1,0 +1,69 @@
+= Migros Courier Tracker Documentation
+:doctype: book
+
+== Create Courier
+
+Couriers have to be registered before sending travel location information.
+
+.request
+include::{snippets}/create_courier_valid/http-request.adoc[]
+
+.response
+include::{snippets}/create_courier_valid/http-response.adoc[]
+
+== Error codes
+
+|===
+| Error | message
+
+| `INVALID_REQUEST`
+| name is mandatory
+|===
+
+== Courier Add Location
+
+Expects dates to be in chronologically ascending order.
+
+.request
+include::{snippets}/courier_add_location_valid/http-request.adoc[]
+
+.response
+include::{snippets}/courier_add_location_valid/http-response.adoc[]
+
+== Error codes
+
+|===
+| Error | message
+
+| `INVALID_REQUEST`
+| invalid date
+
+| `INVALID_REQUEST`
+| latitude must be between -90 and 90
+
+| `INVALID_REQUEST`
+| longitude must be between -180 and 180
+
+| `INVALID_REQUEST`
+| courier id is mandatory
+
+| `COURIER_NOT_FOUND`
+| Courier is not found with id: x
+|===
+
+== Courier Travel Distance
+
+Total distance traveled is given in kilometers.
+
+.request
+include::{snippets}/courier_total_travel_distance_valid/http-request.adoc[]
+
+.response
+include::{snippets}/courier_total_travel_distance_valid/http-response.adoc[]
+
+|===
+| Error | message
+
+| `COURIER_NOT_FOUND`
+| Courier is not found with id: x
+|===
